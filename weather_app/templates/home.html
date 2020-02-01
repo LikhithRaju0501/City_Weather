@@ -10,8 +10,40 @@
     Published By : {{ api.data.attributions.0.name }} <br> <br>
     Place :  {{ api.data.city.name }} <br> <br>
     Latitude : {{ api.data.city.geo.0 }}
-             &nbsp;&nbsp;&nbsp;  Longitude : {{ api.data.city.geo.1 }} </p>
-  </div>
+             &nbsp;&nbsp;&nbsp;  Longitude : {{ api.data.city.geo.1 }} </p> <br>
+      </div>
+
+      <table class="table table-hover table-dark table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Element</th>
+        <th scope="col">Molecular Weight</th>
+        <th scope="col">Qty.[in %]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">CO</th>
+        <td>28</td>
+        <td>{{ api.data.iaqi.co.v }}</</td>
+      </tr>
+      <tr>
+        <th scope="row">NO2</th>
+        <td>46.055</td>
+        <td>{{ api.data.iaqi.no2.v }}</td>
+      </tr>
+      <tr>
+        <th scope="row">O3</th>
+        <td>48</td>
+        <td>{{ api.data.iaqi.o3.v }}</td>
+      </tr>
+      <tr>
+        <th scope="row">SO2</th>
+        <td>64.066</td>
+        <td>{{ api.data.iaqi.so2.v }}</td>
+      </tr>
+    </tbody>
+  </table>
   {% else %}
     Couldnot find a api
   {% endif %}

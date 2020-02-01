@@ -8,6 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Weather Info</title>
+    <style>
+        .good{ background-color:#2ecc71;}
+        .moderate{ background-color: #f1c40f;}
+        .usg{ background-color:#e67e22;}
+        .unhealthy{ background-color:#e74c3c;}
+        .veryunhealthy{ background-color:#9b59b6;}
+        .hazardous{ background-color:#833471;}
+
+    </style>
 
   </head>
   <body>
@@ -26,7 +35,7 @@
         <form class="form-inline my-2 my-lg-0" method = "POST">
           {% csrf_token %}
           <input class="form-control mr-sm-2" type="search" placeholder="Enter The Place" aria-label="Search" name="place">
-          <button class="btn  my-2 my-sm-0 btn-info" type="submit">City Search</button>
+          <button class="btn  my-2 my-sm-0 btn-info" type="submit">Search City</button>
         </form>
       </div>
     </nav>
