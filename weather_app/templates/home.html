@@ -2,9 +2,10 @@
 
 {% block content %}
   {% if api %}
-  <div class="jumbotron">
+  <div class="jumbotron {{ color }}">
   <h1 class="display-4">Air Quality Index</h1>
   <p class="lead"> {{ api.data.iaqi.pm25.v }}</p> <br><br>
+  {{ content_description }}
   <hr class="my-4">
   <p>
     Published By : {{ api.data.attributions.0.name }} <br> <br>
